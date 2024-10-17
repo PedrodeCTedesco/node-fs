@@ -1,0 +1,23 @@
+{
+  "name": "fs-module",
+  "version": "1.0.0",
+  "description": "Using for learn to use the fs module in Node.",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedrodeCTedesco/node-fs.git"
+  },
+  "keywords": [
+    "fs",
+    "node"
+  ],
+  "author": "pedro de castro tedesco",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/PedrodeCTedesco/node-fs/issues"
+  },
+  "homepage": "https://github.com/PedrodeCTedesco/node-fs#readme"
+}
