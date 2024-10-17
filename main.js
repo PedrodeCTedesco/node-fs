@@ -1,10 +1,10 @@
 // main.js
-const { multiplePaths } = require('./helpers/helpers');
+const { multipleWaysOfRead } = require('./helpers/helpers');
 
 const args = process.argv;
 console.log("Argumentos do contexto de execução do Node:", args); 
 
-const dir = "C:/Users/lojaa/Downloads/" // alterar o caminho final de 'diretorio' para qualquer outro nome 
+const file = "c:/Users/lojaa/Downloads/exemplo.txt";
 
 // passando o path do diretório atual
-multiplePaths([dir]);
+multipleWaysOfRead([file]);

@@ -1,16 +1,15 @@
 
-const { navigateDirectories } = require('./directories/directories-helpers');
+const {  readFile, readFileStreamMode, readFileWithBuffer, readFileStreamModeWithBuffer } = require('./files/files-helpers');
 
 // múltiplos paths
-function multiplePaths(paths) {
-    console.log("Argumentos no método multiplePaths: ", paths);
-    
+function multipleWaysOfRead(paths) {    
     // Pass the paths array to fs.realpath and fs.stat
     paths.forEach(path => {
-        navigateDirectories(path)
-            .then((result) => console.log('Diretórios e arquivos navegados:', result))
-            .catch((err) => console.error('Erro na navegação:', err));
+        readFile(path);
+        readFileWithBuffer(path);
+        readFileStreamMode(path);
+        readFileStreamModeWithBuffer(path);
     });
 }
 
-module.exports = { multiplePaths };
+module.exports = { multipleWaysOfRead };
