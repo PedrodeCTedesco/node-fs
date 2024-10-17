@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { navigateDirectories } = require('./directories/directories-helpers');
+const { createDirectories, navigateDirectories, removeDirectories } = require('./directories/directories-helpers');
 
 // Função que lista os conteúdos do diretório (assíncrona)
 function dirContents(err, contents) {
@@ -33,15 +33,9 @@ function multiplePaths(paths) {
     
     // Pass the paths array to fs.realpath and fs.stat
     paths.forEach(path => {
-        fs.realpath(path, getPath);
-        fs.stat(path, (err, dir) => {
-            if (err) {
-                console.error('Erro ao verificar stats:', err);
-                return;
-            }
-
-            navigateDirectories(path);
-        });
+        //createDirectories(path); //--> para criar um diretório
+        //removeDirectories(path); // --> para remover um diretório
+        navigateDirectories(path);
     });
 }
 
