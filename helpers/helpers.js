@@ -1,15 +1,11 @@
 
-const {  readFile, readFileStreamMode, readFileWithBuffer, readFileStreamModeWithBuffer } = require('./files/files-helpers');
+const { writeFile, writeFileStreamMode, appendFiles } = require('./files/files-helpers');
 
 // múltiplos paths
-function multipleWaysOfRead(paths) {    
-    // Pass the paths array to fs.realpath and fs.stat
-    paths.forEach(path => {
-        readFile(path);
-        readFileWithBuffer(path);
-        readFileStreamMode(path);
-        readFileStreamModeWithBuffer(path);
-    });
+function multipleWaysOfWrite(newFile, content) {    
+    writeFile(newFile, content)
+    writeFileStreamMode(newFile, content)
+    appendFiles(newFile, content);
 }
 
-module.exports = { multipleWaysOfRead };
+module.exports = { multipleWaysOfWrite };
